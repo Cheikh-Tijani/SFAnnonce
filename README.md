@@ -1,7 +1,7 @@
-**# Symfony3 Admin Template #**
+**# SF Cheikh Tijani #**
 ===============================
 
-A Symfony project created on February 17, 2016, 12:17 pm.
+A Symfony project created on March 1, 2017, 12:17 pm.
 
 This is a starter Admin template built on latest Symfony3 build (3.0.4 at the time of writing). **This is not a BUNDLE**
 
@@ -41,7 +41,7 @@ Installation is very easy and simple. Please follow the instruction below
 Clone a copy of this repository.
 
 ```sh
-git clone https://github.com/sharfaz/Symfony3-Admin-Template.git
+git clone https://github.com/Cheikh-Tijani/SFAnnonce.git
 ```
 
 2. Create a database **'symfony'** if not already exists.
@@ -51,7 +51,7 @@ git clone https://github.com/sharfaz/Symfony3-Admin-Template.git
 
 ```sh
 go to project folder
-$ cd symfony3-admin-template
+$ cd SFAnnonce
 
 //this will pull all project required dependencies and installed in vendor folder.
 $ composer install
@@ -102,5 +102,3 @@ Admin username: admin
 Password: test
 
 **Happy Coding!!!**
-
-
