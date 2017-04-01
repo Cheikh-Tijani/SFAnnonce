@@ -28,11 +28,12 @@ security:
                 csrf_token_generator: security.csrf.token_manager
                 # if you are using Symfony < 2.8, use the following config instead:
                 # csrf_provider: form.csrf_provider
-                default_target_path: homepage
+                default_target_path: front_default_index
                 always_use_default_target_path: true
                 use_referer: true
-
-            logout:       true
+            logout:
+                path: avanzu_admin_logout
+                target: front_default_index
             anonymous:    true
             # activate different ways to authenticate
 
@@ -44,6 +45,6 @@ security:
 
     access_control:
         - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/register, role: ROLE_SUPER_ADMIN }
+        - { path: ^/register, role: ROLE_ADMIN }
         - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/, role: ROLE_ADMIN }
+        - { path: ^/login, role: ROLE_ADMIN }

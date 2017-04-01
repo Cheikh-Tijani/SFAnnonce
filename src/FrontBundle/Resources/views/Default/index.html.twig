@@ -1,0 +1,272 @@
+{% extends "layout/layout-front.html.twig" %}
+
+{% block title %}ctijani{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/owlcarousel/owl-carousel/owl.carousel.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/jquery-ui-css/Aristo/Aristo.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/style-annonce.css') }}">
+    <style type="text/css">
+        body {
+            padding-top: 50px;
+        }
+        .beforemenus{
+            height: 180px;
+            width: 100%;
+            background: url("http://www.avendrealouer.fr/Content/Default/Images/Home/homeBackground.jpg") ;
+            background-size: cover;
+
+        }
+
+    </style>
+{% endblock %}
+{% block body %}
+
+    <div class="header-content header">
+        <div class="container"><!-- container header-->
+            <div class="row">
+                <ul class="list-inline rsx">
+                    <li><img src="{{ asset('images/twitter.png') }}" alt="" class="img-responsive"></li>
+                    <li><img src="{{ asset('images/facebook.png') }}" alt="" class="img-responsive"></li>
+                    <li><img src="{{ asset('images/google-plus.png') }}" alt="" class="img-responsive"></li>
+                    <li><img src="{{ asset('images/youtube.png') }}" alt="" class="img-responsive"></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="beforeheader">
+        <div class="container-fluid">
+
+        </div>
+    </div><!--end beforeheader -->
+
+    <div class="navbar navbar navbar" role="navigation" id="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- <a class="navbar-brand" rel="home" href="#">Mon site</a> -->
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                <!-- <div class="collapse navbar-collapse"> -->
+
+                <ul class="nav navbar-nav">
+                    <li><a href="#" class="glyphicon glyphicon-home">Home</a></li>
+                    <li><a href="#" class="glyphicon glyphicon-shopping-cart">Acheter</a></li>
+                    <li><a href="#" class="glyphicon  glyphicon-hand-right">Location</a></li>
+                    <li><a href="#" class="glyphicon glyphicon-list">Agence-immobilière</a></li>
+                    <li><a href="#" class="glyphicon glyphicon-glass">Soirées</a></li>
+                    <li><a href="#" class="glyphicon glyphicon-envelope">Contact</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    {% if app.user is not null and is_granted('IS_AUTHENTICATED_FULLY') %}
+                       <li><a href="{{ path('homepage')}}" class="glyphicon glyphicon-user pull-right">Mon-Compte</a></li>
+                       <li><a href="{{ path('avanzu_admin_logout')}}" class="glyphicon glyphicon-log-out">Déconnexion</a></li>
+                    {% else %}
+                        <li><a href="{{ path('fos_user_security_login')}}" class="glyphicon glyphicon-user pull-right">Connexion</a></li>
+                        <li><a href="{{ path('fos_user_security_login')}}" class="glyphicon glyphicon-plus-sign">Inscription</a></li>
+                    {% endif %}
+
+                </ul>
+            </nav>
+            <!-- </div> -->
+        </div>
+    </div>
+    <div class="principale">
+        <div class="row endbeforeheader">
+        </div>
+        <div class="beforemenus container-fluid">
+
+        </div>
+        <div class="container">
+
+            <div class="row">
+                <div class="col-xs-6 col-sm-4 col-md-3">
+                    <h4 class="panel panel-heading titre-bloc">Dernière Annonce Location</h4>
+                    <div class="blog-item">
+                        <div class="image-resp">
+
+                        </div>
+                        <div class="blog-details">
+                            <h4 class="blog-title">
+                            </h4>
+                            <ul class="blog-meta">
+                                <li><span class="glyphicon glyphicon-user"></span><i></i></li>
+                                <li><span class="glyphicon glyphicon-calendar"></span></li>
+                                <li></li>
+                            </ul>
+                            <div class="blog-summary">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-3">
+                    <h4 class="panel panel-heading titre-bloc">Dernière Annonce Vente</h4>
+                    <div class="blog-item">
+                        <div class="image-resp">
+                        </div>
+                        <div class="blog-details">
+                            <h4 class="blog-title">
+                            </h4>
+                            <ul class="blog-meta">
+                                <li><span class="glyphicon glyphicon-user"></span><i></i></li>
+                                <li><span class="glyphicon glyphicon-calendar"></span></li>
+                                <li><span class="glyphicon glyphicon-pushpin"></span></li>
+                            </ul>
+                            <div class="blog-summary">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-3">
+                    <h4 class="panel panel-heading titre-bloc">Dernière Annonce Soirée</h4>
+                    <div class="blog-item">
+                        <div class="image-resp">
+
+                        </div>
+                        <div class="blog-details">
+                            <h4 class="blog-title">
+                            </h4>
+                            <ul class="blog-meta">
+                                <li><span class="glyphicon glyphicon-user"></span><i></i></li>
+                                <li><span class="glyphicon glyphicon-calendar"></span></li>
+                                <li><span class="glyphicon glyphicon-pushpin"></span></li>
+                            </ul>
+                            <div class="blog-summary">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-3">
+                    <h4 class="panel panel-heading titre-bloc">Louer pour les vacances</h4>
+                    <div class="blog-item">
+                        <div class="image-resp">
+
+                        </div>
+                        <div class="blog-details">
+                            <h4 class="blog-title">
+                            </h4>
+                            <ul class="blog-meta">
+                                <li><span class="glyphicon glyphicon-user"></span><i></i></li>
+                                <li><span class="glyphicon glyphicon-calendar"></span></li>
+                                <li><span class="glyphicon glyphicon-pushpin"></span></li>
+                            </ul>
+                            <div class="blog-summary">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--end div col- -->
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-sm-4 col-md-3">
+                    <h4 class="panel panel-heading titre-bloc">Annonces Immobilière</h4>
+                    <div class="blog-item">
+                        <div class="image-resp">
+
+                        </div>
+                        <div class="blog-details">
+                            <div class="blog-summary">
+                                <p></p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-3">
+                    <h4 class="panel panel-heading titre-bloc">Annonces de Soirée</h4>
+                    <div class="blog-item">
+                        <div class="image-resp">
+                        </div>
+                        <div class="blog-details">
+                            <div class="blog-summary">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-3">
+                    <h4 class="panel panel-heading titre-bloc">Meilleurs Agences</h4>
+                    <div class="blog-item">
+                        <div class="image-resp">
+
+                        </div>
+                        <div class="blog-details">
+                            <div class="blog-summary">
+                                <p></p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-3">
+                    <h4 class="panel panel-heading titre-bloc">Les Services</h4>
+                    <div class="blog-item">
+                        <div class="image-resp">
+
+                        </div>
+                        <div class="blog-details">
+                            <div class="blog-summary">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4">
+                    <h4>SUIVEZ-NOUS</h4>
+                    <ul class="footer1">
+                        <li><img src="{{ asset('images/facebook.ico') }}" alt="" class="img-responsive"></li>
+                        <li><img src="{{ asset('images/twitter2.ico') }}" alt="" class="img-responsive"></li>
+                        <li><img src="{{ asset('images/youtube.png') }}" alt="" class="img-responsive"></li>
+                        <li><img src="{{ asset('images/google_plus.ico') }}" alt="" class="img-responsive"></li>
+                        <li><img src="{{ asset('images/social_feeds.png') }}" alt="" class="img-responsive"></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h4>QUI SOMMES NOUS ?</h4>
+                    <ul>
+                        <li><a href="#" class="glyphicon glyphicon-home">A propos</a></li>
+                        <li><a href="#" class="glyphicon glyphicon-home">Mentions légales</a></li>
+                        <li><a href="#" class="glyphicon glyphicon-home">Contact</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h4>NOS OFFRES</h4>
+                    <ul>
+                        <li><a href="#" class="glyphicon glyphicon-home">&nbsp;Publicité sur ctijani</a></li>
+                        <li><a href="#" class="glyphicon glyphicon-home">&nbsp;Offres de ctijani</a></li>
+                        <li><a href="#" class="glyphicon glyphicon-home">&nbsp;Tourisme</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 col-md-4"></div>
+                    <div class="col-sm-6 col-md-6">
+                        <p>Copyright <span class="glyphicon glyphicon-copyright-mark"></span>{{ 'now'|date('Y') }}-Tous droits reservés <b>By:</b> <i>ctijani</i></p>
+                    </div>
+                    <div class="col-sm-2 col-md-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

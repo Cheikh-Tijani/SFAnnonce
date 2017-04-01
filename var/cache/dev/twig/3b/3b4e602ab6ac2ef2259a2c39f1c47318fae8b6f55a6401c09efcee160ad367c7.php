@@ -15,8 +15,8 @@ class __TwigTemplate_94ffe21d87964419f10e06fad430a051acc77cca3130721a9cc5ec34758
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_984d11452f23ba6494e30eb1ac86b31deaa5ee34dbac76404e80d3042fed7efd = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_984d11452f23ba6494e30eb1ac86b31deaa5ee34dbac76404e80d3042fed7efd->enter($__internal_984d11452f23ba6494e30eb1ac86b31deaa5ee34dbac76404e80d3042fed7efd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "layout/user.html.twig"));
+        $__internal_68b26f5e6d6657e29ea43c34251685a79c911254ea72b7ba7b82073dd5b3a223 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_68b26f5e6d6657e29ea43c34251685a79c911254ea72b7ba7b82073dd5b3a223->enter($__internal_68b26f5e6d6657e29ea43c34251685a79c911254ea72b7ba7b82073dd5b3a223_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "layout/user.html.twig"));
 
         // line 1
         echo "<!-- User Account: style can be found in dropdown.less -->
@@ -87,7 +87,7 @@ class __TwigTemplate_94ffe21d87964419f10e06fad430a051acc77cca3130721a9cc5ec34758
 </li>
 ";
         
-        $__internal_984d11452f23ba6494e30eb1ac86b31deaa5ee34dbac76404e80d3042fed7efd->leave($__internal_984d11452f23ba6494e30eb1ac86b31deaa5ee34dbac76404e80d3042fed7efd_prof);
+        $__internal_68b26f5e6d6657e29ea43c34251685a79c911254ea72b7ba7b82073dd5b3a223->leave($__internal_68b26f5e6d6657e29ea43c34251685a79c911254ea72b7ba7b82073dd5b3a223_prof);
 
     }
 
